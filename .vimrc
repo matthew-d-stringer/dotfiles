@@ -6,8 +6,8 @@ set autoindent
 filetype plugin indent on
 
 " set expandtab "makes each tab 4 individual spaces instead of 1 character
-set tabstop=2 "Displays tabs as 2 spaces
-set shiftwidth=2
+set tabstop=4 "Displays tabs as 4 spaces
+set shiftwidth=4
 
 " 80 character mark
 highlight ColorColumn ctermbg=blue
@@ -37,3 +37,6 @@ set wildmenu
 "nnoremap o o<ESC>zza
 "nnoremap O O<ESC>zza
 "nnoremap a a<ESC>zza
+
+autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
