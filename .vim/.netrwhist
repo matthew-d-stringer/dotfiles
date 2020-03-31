@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/mdsflyboy/dev/CMake_for_Dummies_code'
+let g:netrw_dirhist_2='/home/mdsflyboy/dev/CMake_for_Dummies_code/sqrt'
+let g:netrw_dirhist_3='/home/mdsflyboy/.vim'
+let g:netrw_dirhist_4='/home/mdsflyboy/dotfiles'
+let g:netrw_dirhist_5='/home/mdsflyboy/dev/learningOpenGl/src'
+let g:netrw_dirhist_6='/home/mdsflyboy/dev/robot-code-public/linux_libraries'
+let g:netrw_dirhist_7='/home/mdsflyboy/dev/robot-code-public/tools'
+let g:netrw_dirhist_8='/home/mdsflyboy/dev/learningOpenGl/src'
