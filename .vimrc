@@ -6,8 +6,8 @@ set autoindent
 filetype plugin indent on
 
 " set expandtab "makes each tab 4 individual spaces instead of 1 character
-set tabstop=4 "Displays tabs as 4 spaces
-set shiftwidth=4
+set tabstop=2 "Displays tabs as 4 spaces
+set shiftwidth=2
 
 " 80 character mark
 highlight ColorColumn ctermbg=blue
@@ -38,5 +38,39 @@ set wildmenu
 "nnoremap O O<ESC>zza
 "nnoremap a a<ESC>zza
 
+" move to beginning/end of line
+ nnoremap B ^
+ nnoremap E $
+"
+" " $/^ doesn't do anything
+ nnoremap $ <nop>
+ nnoremap ^ <nop>
+
 autocmd vimenter * NERDTree
-map <C-n> :NERDTreeToggle<CR>
+"map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTree<CR>
+
+"fixing tmux? Yeah fixing tmux lol
+set background=dark
+set t_Co=256
+
+"Plugin Managers
+
+"Vim plug
+call plug#begin()
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'townk/vim-autoclose'
+Plug 'tpope/vim-surround'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } 
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+call plug#end()
+
+"Pathogen
+execute pathogen#infect()
+
+"Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+call vundle#end()
