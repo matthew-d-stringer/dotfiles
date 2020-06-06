@@ -8,8 +8,9 @@ filetype plugin indent on
 
 " inoremap nn<SPACE> <ESC>/<++><ENTER>"_c4l
 
-" set expandtab "makes each tab 4 individual spaces instead of 1 character
-set tabstop=2 "Displays tabs as 4 spaces
+set expandtab "makes each tab individual spaces instead of 1 character
+set tabstop=2 "Displays tabs as 2 spaces
+set smarttab
 set shiftwidth=2
 
 " 80 character mark
@@ -83,6 +84,9 @@ Plug 'tpope/vim-surround'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } 
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'ejs'] }
 call plug#end()
 
 "Pathogen
@@ -98,8 +102,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 call vundle#end()
 
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb'
-
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb,*.ejs'
+au BufNewFile,BufRead *.ejs set filetype=html.ejs
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
